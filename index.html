@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мебель «Уют»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top">
+        <div class="container top-inner">
+            <a class="logo" href="#">🛋️ Уют</a>
+           <button class="cart-btn" id="cart-open">🛒 Корзина: <b id="cart-count">0</b></button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Мебель для дома</h1>
+            <p>Диваны, кровати, столы и стулья</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="filters" id="filters"></div>
+        <div class="products" id="products"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Учебный проект: магазин вымышленный, заказы не принимаются.</p>
+        </div>
+    </footer>
+    <div class="overlay" id="overlay"></div>
+       <aside class="drawer" id="drawer">
+        <div class="drawer-head">
+            <h2>Корзина</h2>
+            <button class="close-btn" id="cart-close">✕</button>
+        </div>
+
+        <div class="drawer-items" id="cart-items"></div>
+
+        <div class="drawer-foot" id="cart-foot">
+            <div class="total">Итого: <b id="cart-total">0 ₽</b></div>
+            <button class="add-btn checkout" id="checkout">Оформить заказ</button>
+            <button class="clear-btn" id="clear-btn">Очистить корзину</button>
+        </div>
+
+        <div class="order-form" id="order-form" hidden>
+            <h3>Оформление заказа</h3>
+            <input id="order-name" type="text" placeholder="Имя" maxlength="60" aria-label="Имя">
+            <input id="order-phone" type="tel" placeholder="Телефон" maxlength="25" aria-label="Телефон">
+            <input id="order-address" type="text" placeholder="Адрес доставки" maxlength="150" aria-label="Адрес доставки">
+            <textarea id="order-comment" placeholder="Комментарий (необязательно)" maxlength="300" aria-label="Комментарий"></textarea>
+            <p class="order-note" id="order-note"></p>
+            <button class="add-btn checkout" id="send-order">Отправить заказ в Telegram</button>
+            <button class="back-btn" id="back-btn">← Назад к корзине</button>
+        </div>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>
